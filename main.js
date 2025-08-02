@@ -183,23 +183,49 @@ const DieselCars = cars.filter(car => car.fuel === 'diesel')
 console.log(BenzinaCars);
 console.log(DieselCars);
 
+const OtherCars = cars.filter(car => car.fuel !== 'benzina' && car.fuel !== 'diesel');
+console.log(OtherCars);
+
+// -------------------------------------------------
+
+// Snack 2
+// A partire da un array di stringhe, crea un secondo array formattando
+// le stringhe del primo array in minuscolo e con l’iniziale maiuscola.
+
+const strings = ['hello', 'world', 'javascript', 'is', 'awesome'];
+const newString = strings.map(string => `${string[0].toUpperCase()}${string.slice(1).toLowerCase()}`);
+console.log(newString);
+
+// -------------------------------------------------
+
+// Snack 3
+// Crea un array di oggetti che rappresentano degli animali.
+// Ogni animale ha un nome, una famiglia e una classe.
+// Crea un nuovo array con la lista dei mammiferi
+
+const animals = [
+    { name: 'bear', family: 'Ursidae', class: 'Mammalia' },
+    { name: 'eagle', family: 'Accipitridae', class: 'Aves' },
+    { name: 'dolphin', family: 'Delphinidae', class: 'Mammalia' },
+    { name: 'shark', family: 'Lamnidae', class: 'Chondrichthyes' },
+    { name: 'elephant', family: 'Elephantidae', class: 'Mammalia' },
+    { name: 'crocodile', family: 'Crocodylidae', class: 'Reptilia' },
+]
+
+// oggetto
+const objesctMammaliaAnimals = animals.filter(animal => animal.class === 'Mammalia');
+console.log(objesctMammaliaAnimals);
+
+// array
+const MammaliaAnimals = objesctMammaliaAnimals.map(animal => animal.name);
+console.log(MammaliaAnimals);
+
+// -------------------------------------------------
+
+// Snack 4
+// Crea un array di oggetti che rappresentano delle persone.
+// Ogni persona ha un nome, un cognome e un’età.
+
+// Crea quindi un nuovo array inserendo, per ogni persona, una frase con il nome e cognome e l’indicazione se può guidare, in base all’età.
 
 
-
-/*
-Snack 2
-A partire da un array di stringhe, crea un secondo array formattando le stringhe del primo array in minuscolo e con l’iniziale maiuscola.
-
-    Snack 3
-Crea un array di oggetti che rappresentano degli animali.
-Ogni animale ha un nome, una famiglia e una classe.
-Crea un nuovo array con la lista dei mammiferi
-
-
-Snack 4
-Crea un array di oggetti che rappresentano delle persone.
-Ogni persona ha un nome, un cognome e un’età.
-
-Crea quindi un nuovo array inserendo, per ogni persona, una frase con il nome e cognome e l’indicazione se può guidare, in base all’età.
-
-*/
