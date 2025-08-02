@@ -178,6 +178,13 @@ const cars = [
     { brand: 'Audi', model: 'A3', fuel: 'diesel' },
 ];
 
+const BenzinaCars = cars.filter(car => car.fuel === 'benzina')
+const DieselCars = cars.filter(car => car.fuel === 'diesel')
+console.log(BenzinaCars);
+console.log(DieselCars);
+
+
+
 
 /*
 Snack 2
